@@ -5,4 +5,4 @@ Screenshots as viewed in different devices have been attached. <br />
 
 ![Mobile](/Screenshots/mobile.jpg) <br />
 ![iPad](/Screenshots/iPad.jpg) <br />
-![Desktop](/Screenshots/Desktop.jpg) <br />
+![Desktop](/Screenshots/Desktop.mp4) <br />
