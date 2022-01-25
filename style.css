@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --main-color: rgba(255, 255, 255, 0.308);
+    --border: 2px solid grey;
+    --bg : rgb(0, 0, 0);
+}
+
+*{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    text-transform: capitalize;
+    transition: .2s linear;
+    /* user-select: none; */
+}
+
+html{
+    font-size: 62.5;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 9rem;
+}
+
+body{
+    background: var(--bg);
+    text-align: center;
+}
+
+section{
+    padding: 2rem 7%;
+}
+/* -------------------------------- HEADER and NAVIGATION ------------------------------------------------------------------------------- */
+.header{
+    background-color: rgba(0, 0, 0, 0.575);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 4%;
+    border-bottom: 2px solid black;
+    top: 0; left: 0; right: 0;
+    position: fixed;
+    z-index: 2;
+    text-align: center;
+}
+
+#logo img{
+    height: 4.5rem;
+}
+
+#logo p{
+    font-size: 1.5rem;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Lobster', cursive;
+}
+
+#logo p:hover{
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+.navbar a{
+    margin: 0 0.5rem;
+    color: aliceblue;
+}
+
+.navbar a:hover{
+    color:grey;
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.icons div{
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+}
+
+.icons div:hover{
+    color:var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+/* ------------------------------------ SEARCH BOX --------------------------------------------------------------------------------------- */
+
+.search-form{
+    padding: 2px;
+    position: absolute;
+    top: 115%; right: 7%;
+    background: white;
+
+    width: 350px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    border-radius: 2px;
+}
+
+#search-box input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.2rem;
+    text-transform: none;
+}
+
+#search-icon{
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+#search-icon:hover{
+    color: var(--main-color);
+}
+
+#search-from label{
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 1.2rem;
+    color: rgba(68, 66, 66, 0.877);
+}
+
+#search-from label :hover{
+    color: var(--main-color);
+}
+
+.search-form.active{
+    transform: scaleY(1) ;
+}
+
+#search-box{
+    width: 100%;
+}
+
+/* ------------------------------------- TOUR PACKS ----------------------------------------------------------------------------- */
+
+.packs-container{
+    margin: 8px;
+    position: absolute;
+    top:100%;
+    right: -100%;
+    height: calc(100vh- 9.5 rem);
+    width: 25rem;
+    background-color: rgba(255, 255, 255, 0.466);
+    color: aliceblue;
+    padding: 0 0.6rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.packs{
+    background: rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+    position: relative;
+    margin: 0.8rem 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    padding: 13px;
+}
+
+.packs-container.active{
+    right: 0;
+}
+
+.packs-container h1{
+    font-family: 'Satisfy', cursive;
+    color: aliceblue;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.836);
+}
+
+.packs:hover{
+    transform: scale(1.05);
+}
+
+.packs img{
+    border-radius: 8px;
+    height: 80px;
+    width: 80px;
+}
+
+.packs h3{
+    font-size: 1.4rem;
+    padding-bottom: .5rem;
+}
+
+#price{
+    color: aliceblue;
+}
+
+.packs-container button{
+    padding: 7px 15px;
+    color: white;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.603);
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.packs-container button:hover{
+    background-color: rgba(58, 58, 58, 0.267);
+    transform: scale(1.05);
+    letter-spacing: 0.05rem; 
+}
+
+/* ---------------------------- HOME --------------------------------------------------------------------------- */
+
+#home{
+    color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(images/lagos.jpg) no-repeat center;
+    background-size: cover;
+}
+
+section{
+    padding: 2rem 7%;
+    text-align: center;
+}
+
+.content h3{
+    font-size: 4.5rem;
+    color: rgb(184, 184, 184);
+    margin: 1rem 0;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+
+.content h3 span{
+    color: rgb(255, 255, 255);
+}
+
+.content p{
+    color: aliceblue;
+    line-height: 1.2;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.content a{
+    padding: 7px 15px;
+    color: white;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.377);
+    border: 1px solid aliceblue;
+    border-radius: 8px;
+    margin: 1rem;
+}
+
+.content a:hover{
+    background-color: rgba(255, 255, 255, 0.158);
+}
+/* --------------------------- ABOUT US ------------------------------------------------------------------------------ */
+
+.about h1{
+    font-size: 4.2rem;
+    color: var(--main-color);
+    margin: 2rem;
+}
+
+.about h1 span{
+    margin: 2rem;
+    color: aliceblue;
+}
+
+.row{
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.row:hover{
+    box-shadow: 0px 0px 10px rgb(145, 145, 145);
+}
+
+.about .row{
+    display: flex;
+    margin: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.26);
+    height: auto;
+    padding: 2rem;
+}
+
+.about .row .content{
+    margin: 1rem;
+}
+
+.about .row .content h3{
+    font-size: 2.5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about .row .content h3 span{
+    color: var(--main-color);
+}
+
+.about .row .content p{
+    font-size: 1rem;
+}
+
+.about .row .image{
+    overflow: hidden;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.about .row .image img{
+    width: 75%;
+    padding: 2rem;
+    border-end-end-radius: 35%;
+    border-start-start-radius: 35%;
+}
+
+/* ---------------------------- DESTINATIONS ------------------------------------------------------------------ */
+
+#destinations h1{
+    font-size: 4.2rem;
+    color: aliceblue;
+    margin: 2rem;
+}
+
+#destinations h1 span{
+    color: var(--main-color);
+}
+
+.places{
+    display: flex;
+    overflow: auto;
+    padding: 2rem;
+}
+
+.box img{
+    margin-right: 0.5rem;
+    height: 17rem;
+}
+
+.box p{
+    color: aliceblue;
+    font-size: 2rem;
+    font-family: 'Lobster', cursive;
+}
+
+.box img:hover{
+    transform: scale(1.15);
+}
+
+.places::-webkit-scrollbar {
+    -webkit-appearance:none;
+}
+
+/* --------------------------- CONTACT US ------------------------------------------------------------------------------ */
+
+.contact{
+    text-align: center;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact iframe
+{
+    height: 400px;
+    width: 600px;
+}
+
+.contact h1{
+    font-size: 4.2rem;
+    color: aliceblue;
+    margin: 2rem;
+}
+
+.contact h1 span{
+    margin: 1rem;
+    color: var(--main-color);
+}
+
+.contact p{
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+
+#icons{
+    margin-top: 2rem;
+}
+
+#icons i{
+    font-size: 1.5rem;
+    color: aliceblue;
+    margin: 1rem;
+}
+
+#icons i:hover{
+    transform: scale(1.1);
+    color: var(--main-color);
+}
+
+.contact iframe{
+    margin: 1rem;
+}
+
+.contact .reach{
+    display: flex;
+    margin-bottom: 1.2rem;
+    border: 1px var(--main-color) solid;
+    padding: 0 3rem;
+    
+}
+
+.contact .form{
+    text-align: center;
+    width:50%;
+    padding: 3rem 0;
+    flex-direction: column;
+}
+
+.contact .form input{
+    padding: 5px;
+    margin: 5px;
+    height: 30px;
+    width: 60%;
+    background-color: rgb(221, 221, 221);
+    border-end-end-radius: 11px;
+    border-start-start-radius: 11px;
+    text-align: center;
+}
+
+#query{
+    height: 75px;
+    text-overflow: inherit;
+}
+.form h1{
+    font-size: 2rem;
+}
+
+.form h1 span{
+    color: var(--main-color);
+}
+
+
+.form button{
+    padding: 7px 15px;
+    color: white;
+    font-size: 1.1rem;
+    background-color: rgba(0, 0, 0, 0.603);
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.form button:hover{
+    background-color: rgba(255, 255, 255, 0.158);
+    transform: scale(1.05);
+    letter-spacing: 0.05rem; 
+}
+
+/* -------------------------------- REVIEWS --------------------------------------------------------------------------- */
+.reviews .review-box{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviews h1{
+    font-size: 4.2rem;
+    color: aliceblue;
+    margin: 2rem;
+}
+
+.reviews h1 span{
+    margin: 1rem;
+    color: var(--main-color);
+}
+
+.review{
+    border: 1px solid aliceblue;
+    box-shadow: 0 0 2px aliceblue;
+    color: var(--main-color);
+    font-size: 3rem;
+    margin: 0.2rem;
+    padding: 1rem;
+}
+
+.review img{
+    height: 5rem;
+    margin: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+}
+
+.review p{
+    font-size: 0.9rem;
+    color: aliceblue;
+    padding: 0.2rem;
+}
+
+.review h2{
+    font-size: 1.4rem;
+    color: aliceblue;
+}
+
+.stars{
+    color: var(--main-color);
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+/* --------------------------- MEDIA QUERIES ------------------------------------------------------------------------------ */
+
+@media (max-width:950px)
+{
+    #logo p{
+        display: none;
+    }
+
+    html{
+        font-size: 80%;
+    }
+    .header
+    {
+        padding: 1.5rem 2rem;
+    } 
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(255, 255, 255, 0.158);
+        width : 22rem;
+        height: 100vh;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    
+    .header .navbar.active{
+        right:0%;
+    } 
+    
+    .header .navbar a{
+        width: 85%;
+        color: aliceblue;
+        display: block;
+        margin: 1.5rem;
+    }
+    .box p{
+        font-size: 2rem;
+    }
+    .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+    section
+    {
+        padding: 2rem;
+    }
+    .about .row{
+        display: inline-block;
+    }
+    .about .row .image img{
+        width: 90%;
+    }
+    .about h1, #destinations h1, .contact h1, .reviews h1{
+        font-size: 3.2rem;
+    }
+    .about p, .contact p, .reviews p{
+        font-size: 1rem;
+    }
+    .reviews .review-box{
+        display: block;
+    }
+    .review{
+        margin: 0.6rem;
+    }
+    .contact .reach
+    {
+        display: block;
+        padding: 0.5rem;
+    }
+    .contact iframe
+    {
+        width: 85%;
+    }
+    .contact .form{
+        width:100%;
+        display: block;
+    }
+    .form h1{
+        font-size: 1.7rem;
+    }
+}
